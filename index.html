@@ -6,30 +6,32 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link type="text/css" rel="stylesheet" href="assets/css/reset.css">
     <link type="text/css" rel="stylesheet" href="assets/css/style.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
     <title>Crystal Game</title>
 </head>
 <body>
     <h1>Crystals Collector!</h1>
     <div class="directions">
         <p>You will be given a random number at the start of the game.</p>
-        <p>There are four crystals below.  By clicking on a crystal you will add a specific amount of points to your total score.</p>
+        <p>There are four crystals below.  Each is assigned a random number between 1 and 12 at the start of the game.</p>
+        <p>By clicking on a crystal you will reveal its value and add those points to your total score.  Each time you click a crystal its value is added to your total score.</p>
         <p>You win the game by matching your total score to the given random number.  You lose the game if your total score goes above the random number.</p>
-        <p>The value of each crystal is hidden from you until you click on it.</p>
-        <p>Each time a new round starts, the values of each crystal will change.</p>
+        <p>Each time a new round starts, the random number to get to and values of each crystal will be reset.</p>
     </div>
-    <h2 id="targetNumberText">The target Number is: </h1>
-    <div id="score">
-        <h2 id="winsText"></h2>
-        <h2 id="lossesText"></h2>
-    </div>
-    <div class="crystalButtons">
-        <button id="tealCrystal"><img src="assets/images/my-icons-collection/png/001-crystal.png" alt="A Teal Crystal"></button>
-        <button id="purpleCrystal"><img src="assets/images/my-icons-collection/png/002-crystal-1.png" alt="A Purple Crystal"></button>
-        <button id="pinkCrystal"><img src="assets/images/my-icons-collection/png/003-mineral.png" alt="A Pink Crystal"></button>
-        <button id="blueCrystal"><img src="assets/images/my-icons-collection/png/004-crystal-2.png" alt="A Blue Crystal"></button>
-    </div>
-    <h2 id="guessTotal">Your guesses so far total: </h2>
+    <h2 id="targetNumberText"></h1>
+    
+    <h2 id="guessTotal">Current Score: 0</h2>
 
-    <script type="javascript/text" src="assets/javascript/game.js"></script>
+    <div id="crystalButtons"></div>
+
+    <div id="crystal-values"></div>
+
+    <div id="score">
+        <h2 id="winsText">Wins: 0</h2>
+        <h2 id="lossesText">Losses: 0</h2>
+    </div>    
+
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
+
 </body>
 </html>
