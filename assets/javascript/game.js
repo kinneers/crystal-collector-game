@@ -16,11 +16,12 @@ $(document).ready(function() {
     $("#targetNumberText").text("Your target number is: " + targetNumber);
 
     for (var i = 0; i < crystalValueOptions.length; i++) {
-        var imageCrystal = $("<img>)");
+        var imageCrystal = $("<img>");
         imageCrystal.addClass("crystal-image");
         imageCrystal.attr("src", crystalURLs[i]);
         imageCrystal.attr("data-crystalValue", crystalValueOptions[i]);
         imageCrystal.attr("alt", crystalsAlt[i]);
+        //imageCrystal.text($('data-crystalValue'));  Need to show value somehow
         $("#crystalButtons").append(imageCrystal);
     }
 
@@ -42,16 +43,16 @@ $(document).ready(function() {
         crystalValue = parseInt(crystalValue);
         counter += crystalValue;
         $("#guessTotal").text("Current Score: " + counter);
-        $("crystal-image").text(crystalValue);
 
         if (counter === targetNumber) {
+            alert("You win!");
             wins++;
             $('#winsText').text("Wins: " + wins);
             reset();
         }
 
         else if (counter >= targetNumber) {
-            alert("You lose!!");
+            alert("You lose!");
             losses++;
             $('#lossesText').text("Losses: " + losses);
             reset();           
