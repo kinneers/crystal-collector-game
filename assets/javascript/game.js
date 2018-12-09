@@ -13,7 +13,7 @@ $(document).ready(function() {
     $('.three').attr('value', parseInt(val3));
     $('.four').attr('value', parseInt(val4));
 
-    $(".crystal-image").on("click", function() {
+    $(".crystal-image").on("click tap", function() {
         var crystalValue = ($(this).attr("value"));
         crystalValue = parseInt(crystalValue);
         counter += crystalValue;
