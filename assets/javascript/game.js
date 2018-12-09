@@ -2,7 +2,7 @@ $(document).ready(function() {
 
     var wins = 0;
     var losses = 0;
-    var targetNumber = Math.floor(Math.random() * 120) + 1;
+    var targetNumber = Math.floor(Math.random() * 102) + 19;
     var counter = 0;
     var crystalValueOptions = [Math.floor(Math.random() * 12) + 1, Math.floor(Math.random() * 12) + 1, Math.floor(Math.random() * 12) + 1, Math.floor(Math.random() * 12) + 1];
     var crystalURLs = ["assets/images/my-icons-collection/png/002-crystal-1.png", 
@@ -16,12 +16,13 @@ $(document).ready(function() {
     $("#targetNumberText").text("Your target number is: " + targetNumber);
 
     for (var i = 0; i < crystalValueOptions.length; i++) {
-        var imageCrystal = $("<img>");
+        var imageCrystal = $("<img><h3>");
         imageCrystal.addClass("crystal-image");
         imageCrystal.attr("src", crystalURLs[i]);
         imageCrystal.attr("data-crystalValue", crystalValueOptions[i]);
         imageCrystal.attr("alt", crystalsAlt[i]);
         $("#crystalButtons").append(imageCrystal);
+        $("h3").removeAttr("src alt");
     }
 
     function reset() {
