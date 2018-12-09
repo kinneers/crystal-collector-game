@@ -1,3 +1,15 @@
 .crystal-image {
     width: 300px;
 }
+
+h3 {
+    display: inline;
+}
+
+/* From old try  
+.image-value {
+    display: inline;
+    padding-right: 50px;
+    font-size: 30px;
+}
+*/

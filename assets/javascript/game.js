@@ -1,45 +1,20 @@
 $(document).ready(function() {
-
     var wins = 0;
     var losses = 0;
     var targetNumber = Math.floor(Math.random() * 102) + 19;
     var counter = 0;
-    var crystalValueOptions = [Math.floor(Math.random() * 12) + 1, Math.floor(Math.random() * 12) + 1, Math.floor(Math.random() * 12) + 1, Math.floor(Math.random() * 12) + 1];
-    var crystalURLs = ["assets/images/my-icons-collection/png/002-crystal-1.png", 
-                    "assets/images/my-icons-collection/png/001-crystal.png", 
-                    "assets/images/my-icons-collection/png/003-mineral.png", 
-                    "assets/images/my-icons-collection/png/004-crystal-2.png"];
-    var crystalsAlt = ["Purple Crystal", "Teal Crystal", "Pink Crystal", "Blue Crystal"];
-
-    console.log(crystalValueOptions);
-
     $("#targetNumberText").text("Your target number is: " + targetNumber);
+    var val1 = Math.floor(Math.random() * 12) + 1;
+    var val2 = Math.floor(Math.random() * 12) + 1;
+    var val3 = Math.floor(Math.random() * 12) + 1;
+    var val4 = Math.floor(Math.random() * 12) + 1;
+    $('.one').attr('value', parseInt(val1));
+    $('.two').attr('value', parseInt(val2));
+    $('.three').attr('value', parseInt(val3));
+    $('.four').attr('value', parseInt(val4));
 
-    for (var i = 0; i < crystalValueOptions.length; i++) {
-        var imageCrystal = $("<img><h3>");
-        imageCrystal.addClass("crystal-image");
-        imageCrystal.attr("src", crystalURLs[i]);
-        imageCrystal.attr("data-crystalValue", crystalValueOptions[i]);
-        imageCrystal.attr("alt", crystalsAlt[i]);
-        $("#crystalButtons").append(imageCrystal);
-        $("h3").removeAttr("src alt");
-    }
-
-    function reset() {
-        targetNumber = Math.floor(Math.random() * 120) + 1;
-        counter = 0;
-        crystalValueOptions = [Math.floor(Math.random() * 12) + 1, Math.floor(Math.random() * 12) + 1, Math.floor(Math.random() * 12) + 1, Math.floor(Math.random() * 12) + 1];
-        crystalURLs = ["assets/images/my-icons-collection/png/002-crystal-1.png", 
-                        "assets/images/my-icons-collection/png/001-crystal.png", 
-                        "assets/images/my-icons-collection/png/003-mineral.png", 
-                        "assets/images/my-icons-collection/png/004-crystal-2.png"];
-        crystalsAlt = ["Purple Crystal", "Teal Crystal", "Pink Crystal", "Blue Crystal"];
-        $("#targetNumberText").text("Your target number is: " + targetNumber);
-        $("#guessTotal").text("Current Score: " + counter);
-    }
-    
     $(".crystal-image").on("click", function() {
-        var crystalValue = ($(this).attr("data-crystalValue"));
+        var crystalValue = ($(this).attr("value"));
         crystalValue = parseInt(crystalValue);
         counter += crystalValue;
         $("#guessTotal").text("Current Score: " + counter);
@@ -58,4 +33,20 @@ $(document).ready(function() {
             reset();           
         } 
     })
+
+    function reset() {
+        targetNumber = Math.floor(Math.random() * 120) + 1;
+        counter = 0;
+        $("#targetNumberText").text("Your target number is: " + targetNumber);
+        $("#guessTotal").text("Current Score: " + counter);
+        val1 = Math.floor(Math.random() * 12) + 1;
+        val2 = Math.floor(Math.random() * 12) + 1;
+        val3 = Math.floor(Math.random() * 12) + 1;
+        val4 = Math.floor(Math.random() * 12) + 1;
+        $('.one').attr('value', parseInt(val1));
+        $('.two').attr('value', parseInt(val2));
+        $('.three').attr('value', parseInt(val3));
+        $('.four').attr('value', parseInt(val4));
+    }
+
 })
