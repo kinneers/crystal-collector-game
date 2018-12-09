@@ -35,7 +35,7 @@ $(document).ready(function() {
     })
 
     function reset() {
-        targetNumber = Math.floor(Math.random() * 120) + 1;
+        targetNumber = Math.floor(Math.random() * 102) + 19;
         counter = 0;
         $("#targetNumberText").text("Your target number is: " + targetNumber);
         $("#guessTotal").text("Current Score: " + counter);
