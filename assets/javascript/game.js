@@ -21,7 +21,6 @@ $(document).ready(function() {
         imageCrystal.attr("src", crystalURLs[i]);
         imageCrystal.attr("data-crystalValue", crystalValueOptions[i]);
         imageCrystal.attr("alt", crystalsAlt[i]);
-        //imageCrystal.text($('data-crystalValue'));  Need to show value somehow
         $("#crystalButtons").append(imageCrystal);
     }
 
