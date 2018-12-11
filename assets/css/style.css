@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Merienda+One|PT+Sans');
+
 body {
     font-family: 'PT Sans', sans-serif;
     height: 100%;
@@ -36,6 +38,7 @@ h2 {
 
 .crystal-image {
     width: 200px;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 640px) {
