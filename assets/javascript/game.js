@@ -48,5 +48,4 @@ $(document).ready(function() {
         $('.three').attr('value', parseInt(val3));
         $('.four').attr('value', parseInt(val4));
     }
-
 })
