@@ -33,7 +33,7 @@ $(document).ready(function() {
             reset();
         }
 
-        else if (counter >= targetNumber) {
+        else if (counter > targetNumber) {
             alert("You lose!");
             losses++;
             $('#lossesText').text("Losses: " + losses);
