@@ -1,4 +1,4 @@
-# Word-Guess-Game
+# Crystal Collector Game
 Interactive web browser game with HTML dynamically updated using jQuery
 
 ## Developed by: Sarah Kinneer
@@ -10,7 +10,7 @@ Interactive web browser game with HTML dynamically updated using jQuery
 JavaScript, JQuery, HTML5, and CSS3
 
 ## Link to Live Site:
-- [Play the Game!](https://kinneers.github.io/crystals-collector-game/) - Head to the live site for some fun!
+- [Play the Game!](https://kinneers.github.io/crystal-collector-game/) - Head to the live site for some fun!
 
 ## To Use the Live Site:
 - You will be given a random target number between 19 and 120 at the beginning of the game.
