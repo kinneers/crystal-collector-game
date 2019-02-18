@@ -1,7 +1,7 @@
 /*
 Developer: Sarah Kinneer
-Title: Crystals Collector (unit 4 game)
-Description: Homework 4 (JavaScript + jQuery Game)
+Title: Crystals Collector
+Description: JavaScript + jQuery Game
 Date: 12-8-2018
 */
 
