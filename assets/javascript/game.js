@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /*
 Developer: Sarah Kinneer
 Title: Crystals Collector
@@ -6,6 +7,7 @@ Date: 12-8-2018
 */
 
 $(document).ready(function() {
+    //Sets initial game values
     var wins = 0;
     var losses = 0;
     var targetNumber = Math.floor(Math.random() * 102) + 19;
@@ -21,11 +23,13 @@ $(document).ready(function() {
     $('.four').attr('value', parseInt(val4));
 
     $(".crystal-image").on("click tap", function() {
+        //Adds the value of the selected crystal to the counter
         var crystalValue = ($(this).attr("value"));
         crystalValue = parseInt(crystalValue);
         counter += crystalValue;
         $("#guessTotal").text("Current Score: " + counter);
 
+        //When the counter equals the target number, alert win, increment wins, and reset to start new round
         if (counter === targetNumber) {
             alert("You win!");
             wins++;
@@ -33,6 +37,7 @@ $(document).ready(function() {
             reset();
         }
 
+        //If the counter becomes greater than the target number, alert loss, increment losses, and reset to start a new round
         else if (counter > targetNumber) {
             alert("You lose!");
             losses++;
@@ -41,6 +46,7 @@ $(document).ready(function() {
         } 
     })
 
+    //Starts new round: sets new crystal values and target number; resets counter; displays on page
     function reset() {
         targetNumber = Math.floor(Math.random() * 102) + 19;
         counter = 0;
