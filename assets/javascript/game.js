@@ -44,7 +44,7 @@ $(document).ready(function() {
             $('#lossesText').text("Losses: " + losses);
             reset();           
         } 
-    })
+    });
 
     //Starts new round: sets new crystal values and target number; resets counter; displays on page
     function reset() {
@@ -61,4 +61,4 @@ $(document).ready(function() {
         $('.three').attr('value', parseInt(val3));
         $('.four').attr('value', parseInt(val4));
     }
-})
+});
